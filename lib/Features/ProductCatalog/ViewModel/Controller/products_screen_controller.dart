@@ -1,4 +1,6 @@
-class ProductsScreenController {
+import 'package:get/get.dart';
+
+class ProductsScreenController extends GetxController{
   List<String> images = [
     'Assets/Images/0.jpg',
     'Assets/Images/1.jpg',
@@ -44,5 +46,7 @@ class ProductsScreenController {
     'A wonderful product with a b c features. Works fine and has usb wire',
     'A wonderful product with a b c features. Works fine and has usb wire',
   ];
+
+
 
 }

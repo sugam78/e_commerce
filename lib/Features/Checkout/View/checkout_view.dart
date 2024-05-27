@@ -1,5 +1,6 @@
 
 import 'package:e_commerce/Features/Checkout/Repository/checkout_repository.dart';
+import 'package:e_commerce/Resources/Components/reusuable_button.dart';
 import 'package:e_commerce/Resources/Navigate/navigation.dart';
 import 'package:flutter/material.dart';
 
@@ -60,10 +61,11 @@ class _CheckoutVewState extends State<CheckoutVew> {
                 }),
               ],
             ),
-
+            ReusuableButton(title: 'Pay', onTap: (){}),
           ],
         ),
       ),
+
     );
   }
 }

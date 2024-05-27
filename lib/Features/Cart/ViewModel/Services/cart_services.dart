@@ -29,7 +29,6 @@ class CartServices{
   Future<bool> isProductInCart(String productName) async {
     items = await fetchItems(); // Now we await the result of fetchItems
     Set<dynamic> productNames = items.map((item) => item['name']?? '').toSet();
-    debugPrint('name ${productNames.toString()}');
     return productNames.contains(productName);
   }
 
