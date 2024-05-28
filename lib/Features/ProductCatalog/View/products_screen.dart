@@ -54,7 +54,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
           Expanded(
             child: GridView.builder(
               padding: EdgeInsets.all(10),
-              itemCount: products.name.length,
+              itemCount: products.model.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2, childAspectRatio: 0.5),
               itemBuilder: (context, index) {
@@ -63,20 +63,20 @@ class _ProductsScreenState extends State<ProductsScreen> {
                   child: InkWell(
                     onTap: () => navigation.navigateToSpecificProductScreen(
                         context,
-                        products.name[index],
-                        products.images[index],
-                        products.price[index],
-                        products.description[index],
-                        products.rating[index]),
+                        products.model[index].name.toString(),
+                        products.model[index].images.toString(),
+                        products.model[index].price.toString(),
+                        products.model[index].description.toString(),
+                        products.model[index].rating!.toDouble()),
                     child: Column(
                       children: [
                         Image(
                             height: MediaQuery.of(context).size.height * 0.3,
-                            image: AssetImage(products.images[index])),
-                        Text(products.name[index]),
-                        Text('Rs ${products.price[index]}'),
+                            image: AssetImage(products.model[index].images.toString())),
+                        Text(products.model[index].name.toString()),
+                        Text('Rs ${products.model[index].price}'),
                         FutureBuilder<bool>(
-                          future: productRepository.isProductInCart(products.name[index]),
+                          future: productRepository.isProductInCart(products.model[index].name.toString()),
                           builder: (context, snapshot) {
                             if (snapshot.connectionState == ConnectionState.done) {
                               if (snapshot.hasData && snapshot.data!) {
@@ -85,7 +85,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                 return ReusuableButton(
                                   title: 'Add to cart',
                                   onTap: () {
-                                    addToCartRepo.addToCart(products.images[index], products.price[index], products.name[index]);
+                                    addToCartRepo.addToCart(products.model[index].images.toString(), products.model[index].price.toString(), products.model[index].name.toString());
                                   },
                                   height: MediaQuery.of(context).size.height * 0.04,
                                   width: MediaQuery.of(context).size.width * 0.35,

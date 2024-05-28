@@ -1,5 +1,4 @@
 import 'package:e_commerce/Features/Auth/Repository/signin_repository.dart';
-import 'package:e_commerce/Features/Auth/ViewModel/Services/signin_services.dart';
 import 'package:e_commerce/Resources/Components/reusuable_button.dart';
 import 'package:e_commerce/Features/Auth/ViewModel/Controller/signin_screen_controller.dart';
 import 'package:e_commerce/Resources/Navigate/navigation.dart';
@@ -38,7 +37,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 decoration: InputDecoration(
                     hintText: 'Email',
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 1),
+                      borderSide: const BorderSide(width: 1),
                       borderRadius: BorderRadius.circular(10),
                     )),
                 validator: (value) {
@@ -63,7 +62,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 decoration: InputDecoration(
                     hintText: 'Password',
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 1),
+                      borderSide: const BorderSide(width: 1),
                       borderRadius: BorderRadius.circular(10),
                     )),
                 validator: (value) {
@@ -92,10 +91,10 @@ class _SignInScreenState extends State<SignInScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text('Already have an account?'),
+                  const Text('Already have an account?'),
                   TextButton(
                       onPressed: () => navigation.navigateToLoginScreenR(context),
-                      child: Text(
+                      child: const Text(
                         'Login',
                         style: TextStyle(decoration: TextDecoration.underline),
                       )),

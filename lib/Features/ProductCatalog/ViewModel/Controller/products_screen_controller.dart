@@ -1,52 +1,73 @@
 import 'package:get/get.dart';
 
-class ProductsScreenController extends GetxController{
-  List<String> images = [
-    'Assets/Images/0.jpg',
-    'Assets/Images/1.jpg',
-    'Assets/Images/2.jpg',
-    'Assets/Images/3.jpg',
-    'Assets/Images/4.jpg',
-    'Assets/Images/5.jpg',
-    'Assets/Images/6.jpg',
-    'Assets/Images/7.jpg',
-    'Assets/Images/8.jpg'
-  ];
-  List<String> name = [
-    'Gaming Mouse',
-    'A Mouse',
-    'B Mouse',
-    'C Mouse',
-    'D Mouse',
-    'E Mouse',
-    'F Mouse',
-    'G Mouse',
-    'F Mouse'
-  ];
-  List<String> price = [
-    '1000',
-    '900',
-    '840',
-    '720',
-    '660',
-    '590',
-    '520',
-    '449',
-    '299'
-  ];
-  List<double> rating = [4.5, 4, 3, 4.2, 3.8, 4.8, 4.5, 2.8, 2.9, 5.0];
-  List<String> description = [
-    'A wonderful product with a b c features. Works fine and has usb wire',
-    'A wonderful product with a b c features. Works fine and has usb wire',
-    'A wonderful product with a b c features. Works fine and has usb wire',
-    'A wonderful product with a b c features. Works fine and has usb wire',
-    'A wonderful product with a b c features. Works fine and has usb wire',
-    'A wonderful product with a b c features. Works fine and has usb wire',
-    'A wonderful product with a b c features. Works fine and has usb wire',
-    'A wonderful product with a b c features. Works fine and has usb wire',
-    'A wonderful product with a b c features. Works fine and has usb wire',
-  ];
+import '../../Model/ProductModel.dart';
+
+class ProductsScreenController extends GetxController {
 
 
-
+  List<ProductModel> model = [
+    ProductModel(
+        images: 'Assets/Images/0.jpg',
+        name: 'Gaming Mouse',
+        price: '890',
+        rating: 4.6,
+        description:
+            'A wonderful product with a b c features. Works fine and has usb wire'),
+    ProductModel(
+        images: 'Assets/Images/1.jpg',
+        name: 'A Mouse',
+        price: '870',
+        rating: 4.4,
+        description:
+            'A wonderful product with a b c features. Works fine and has usb wire'),
+    ProductModel(
+        images: 'Assets/Images/2.jpg',
+        name: 'B Mouse',
+        price: '820',
+        rating: 4.2,
+        description:
+            'A wonderful product with a b c features. Works fine and has usb wire'),
+    ProductModel(
+        images: 'Assets/Images/3.jpg',
+        name: 'C Mouse',
+        price: '780',
+        rating: 3.2,
+        description:
+            'A wonderful product with a b c features. Works fine and has usb wire'),
+    ProductModel(
+        images: 'Assets/Images/4.jpg',
+        name: 'D Mouse',
+        price: '720',
+        rating: 3.8,
+        description:
+            'A wonderful product with a b c features. Works fine and has usb wire'),
+    ProductModel(
+        images: 'Assets/Images/5.jpg',
+        name: 'Z Mouse',
+        price: '770',
+        rating: 4.4,
+        description:
+        'A wonderful product with a b c features. Works fine and has usb wire'),
+    ProductModel(
+        images: 'Assets/Images/6.jpg',
+        name: 'F Mouse',
+        price: '220',
+        rating: 4.2,
+        description:
+        'A wonderful product with a b c features. Works fine and has usb wire'),
+    ProductModel(
+        images: 'Assets/Images/7.jpg',
+        name: 'J Mouse',
+        price: '320',
+        rating: 3.2,
+        description:
+        'A wonderful product with a b c features. Works fine and has usb wire'),
+    ProductModel(
+        images: 'Assets/Images/8.jpg',
+        name: 'K Mouse',
+        price: '440',
+        rating: 3.8,
+        description:
+        'A wonderful product with a b c features. Works fine and has usb wire'),
+  ];
 }

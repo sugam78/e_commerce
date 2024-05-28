@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: InputDecoration(
                     hintText: 'Email',
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 1),
+                      borderSide: const BorderSide(width: 1),
                       borderRadius: BorderRadius.circular(10),
                     )),
                 validator: (value) {
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: InputDecoration(
                     hintText: 'Password',
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 1),
+                      borderSide: const BorderSide(width: 1),
                       borderRadius: BorderRadius.circular(10),
                     )),
                 validator: (value) {
@@ -89,10 +89,10 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text('Don\'t have an account?'),
+                  const Text('Don\'t have an account?'),
                   TextButton(
                       onPressed: () =>navigation.navigateToSigninScreenR(context),
-                      child: Text(
+                      child: const Text(
                         'SignIn',
                         style: TextStyle(decoration: TextDecoration.underline),
                       )),
